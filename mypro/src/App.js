@@ -4,6 +4,8 @@ import Nav from './navbar';
 import Home from './home';
 import Contact from './contact';
 import Profile from './profile';
+import Login from './login';
+import Sign from './sign';
 import About from './about';
 import {
   BrowserRouter as Router,
@@ -24,6 +26,8 @@ function App() {
           <Route path="/profile" element={<Profile/>} />
           
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/login.js" element={<Login/>} />
+          <Route path="/sign.js" element={<Sign/>} />
           
     </Routes>
     </Router>
