@@ -1,0 +1,9 @@
+
+li:hover{
+  transition: all 0.2s ease;
+  background-color: #72e9f1;
+  color: #ffffff;
+  border-radius: 20px;
+  
+  
+}
