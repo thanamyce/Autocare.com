@@ -37,3 +37,5 @@ Receive personalized advice from industry experts.
 10. Quick Setup
 "Get Started Fast"
 Enjoy a rapid and hassle-free setup process
+
+mongodb: mongodb://localhost:27017//mypro
