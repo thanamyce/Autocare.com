@@ -3,17 +3,17 @@ import Nstyle from "./navbar.css";
 import { Link } from "react-router-dom";
 
 export default function navbar() {
-  function login() {
+  /*function login() {
     window.location.href = "./login.js";
   }
   function sign() {
     window.location.href = "./sign.js";
-  }
+  }*/
 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid mx-5">
+        <div className="container-fluid mx-5" >
           <a
             className="navbar-brand fw-bold text-info"
             href="#"
@@ -78,18 +78,24 @@ export default function navbar() {
               class="btn-group w-25 my-1 "
               role="group"
               aria-label="Basic outlined example"
-            >
+            > 
+            
               <button
                 type="button"
                 class="btn btn-outline-success p-2 fw-bold"
-                onClick={login}
+                onClick={()=>{
+                  window.location.href = "./login.js";
+                }}
               >
                 Login
               </button>
+              
               <button
                 type="button"
                 class="btn btn-outline-success p-2 fw-bold"
-                onClick={sign}
+                onClick={()=>{
+                  window.location.href = "./sign.js";
+                }}
               >
                 Sign Up
               </button>

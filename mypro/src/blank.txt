@@ -39,3 +39,5 @@ Receive personalized advice from industry experts.
 Enjoy a rapid and hassle-free setup process
 
 mongodb: mongodb://localhost:27017//mypro
+heklll
+mongodb://localhost:27017
