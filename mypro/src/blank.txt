@@ -41,3 +41,15 @@ Enjoy a rapid and hassle-free setup process
 mongodb: mongodb://localhost:27017//mypro
 heklll
 mongodb://localhost:27017
+.carousel-container {
+  width: 100%; /* Make the carousel take full width */
+  height: 89vh; /* Full viewport height */
+  margin: 0 auto;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.slick-slide img {
+  width: 100%; /* Make the image take full width of its container */
+  height: 100%; /* Make the image take the full height */
+  object-fit: cover; /* Ensure the image scales to cover the container without distortion */
+}

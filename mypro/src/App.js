@@ -7,6 +7,9 @@ import Profile from './profile';
 import Login from './login';
 import Sign from './sign';
 import About from './about';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Carousel from './carousel'
 import {
   BrowserRouter as Router,
   Routes,
@@ -30,6 +33,7 @@ function App() {
           <Route path="/sign.js" element={<Sign/>} />
           
     </Routes>
+    <Carousel/>
     </Router>
     
     </>

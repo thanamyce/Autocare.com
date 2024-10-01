@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-container {
+  width: 100%; /* Make the carousel take full width */
+  height: 89vh; /* Full viewport height */
+  
+  overflow: hidden;
+/* Ensure no overflow */
+}
+
+.slick-slide img {
+  width: 100%; /* Make the image take full width of its container */
+ /* Make the image take the full height */
+  object-fit: contain; /* Ensure the image scales to cover the container without distortion */
+}

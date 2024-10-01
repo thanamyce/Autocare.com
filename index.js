@@ -74,7 +74,21 @@ app.get('/test', (req, res) => {
     const name = req.query.name || 'World';
     res.send(`Hello ${name}`);
 });
-
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.json({ success: false, message: 'User not found' });
+    }
+  
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.json({ success: false, message: 'Invalid credentials' });
+    }
+  
+    res.json({ success: true, message: 'Login successful' });
+  });
 // Start the server
 app.listen(5000, () => {
     console.log('Server running on port 5000');

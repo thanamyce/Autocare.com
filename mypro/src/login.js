@@ -1,8 +1,33 @@
-import React from "react";
-import Mech from "./mech.jpg";
-import Car from "./car.png";
 
-export default function login() {
+import React, { useState } from "react";
+import axios from "axios";
+
+export default function Login() {
+  const [username, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post('http://localhost:5000/login', {
+        username,
+        password,
+      });
+
+      if (res.data.success) {
+        setMessage("Login Successful");
+      } else {
+        setMessage("Login failed");
+      }
+    } catch (error) {
+      console.error('There was an error with the login request!', error);
+      setMessage('An error occurred. Please try again.');
+    }
+  };
+
+
   return (
     <>
       <div>
@@ -10,11 +35,10 @@ export default function login() {
           className="container bg-light mt-lg-4 w-25 pt-5 ps-5 pe-5 pb-3 bg-light"
           style={{
             borderRadius: "20px",
-            marginLeft: '29.8%',
             boxShadow: "2px 2px 6px black",
           }}
         >
-          <form>
+          <form onSubmit={handleSubmit}>
             <p
               className="text-center pb-3  fw-bold"
               style={{ fontSize: "45px" }}
@@ -30,6 +54,8 @@ export default function login() {
                 className="form-control  border border-success"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                value={username}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <div id="emailHelp" className="form-text">
                 We'll never share your email with anyone else.
@@ -43,28 +69,22 @@ export default function login() {
                 type="password"
                 className="form-control  border border-success"
                 id="exampleInputPassword1"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
+              <p className="fs-bold pt-3 text-center">{message}</p>
             </div>
-            <div className="mb-3 form-check">
-              <input
-                type="checkbox"
-                className="form-check-input border border-success-subtle"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label" for="exampleCheck1">
-                Check me out
-              </label>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
+            <div className="d-flex justify-content-center">
+            <button type="submit" className="btn btn-primary " style={{width: '200px', borderRadius: '15px'}}>
+              Login
+            </button></div>
             <p className="fs-bold pt-3 text-center">
               Don't Have Account <a href="./sign.js">Sign-in</a>
             </p>
           </form>
         </div>
       </div>
-      <img src={Mech} style={{height: '595px', width: '850px', position: 'absolute', left: '-12%', top: '10%', zIndex: '-1'}}/>
+      
       
      
     </>
