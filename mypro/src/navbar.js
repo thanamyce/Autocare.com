@@ -52,7 +52,7 @@ export default function navbar() {
                   aria-current="page"
                   to="/profile"
                 >
-                  Profile
+                  Services
                 </Link>
               </li>
               <li className="nav-item me-lg-4">
@@ -61,7 +61,7 @@ export default function navbar() {
                   aria-current="page"
                   to="/contact"
                 >
-                  Contactus
+                  Help
                 </Link>
               </li>
               <li className="nav-item me-lg-4">

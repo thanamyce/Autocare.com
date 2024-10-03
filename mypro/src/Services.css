@@ -1,0 +1,24 @@
+/* src/pages/Services.css */
+
+.service-package {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    padding: 40px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 20px; /* Optional rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 75%; /* Set width to 75% */
+    margin: 0 auto; /* Center the block */
+  }
+  
+  .service-image {
+    width: 120px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 4px; /* Optional rounded corners for the image */
+  }
+  
+  .card-body {
+    flex: 1; /* Allow the text container to take up the remaining space */
+  }
+  
