@@ -1,0 +1,5 @@
+.carousel-item img {
+  height: 570px; /* Adjust the height as needed */
+  object-fit: cover; /* Makes the image fit inside the height without distorting */
+  width: 100%; /* Ensures the image fills the width */
+}

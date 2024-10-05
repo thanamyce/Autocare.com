@@ -2,6 +2,7 @@
 import './App.css';
 import Nav from './navbar';
 import Home from './home';
+
 import Contact from './contact';
 import Profile from './profile';
 import Login from './login';
