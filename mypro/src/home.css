@@ -2,4 +2,71 @@
   height: 570px; /* Adjust the height as needed */
   object-fit: cover; /* Makes the image fit inside the height without distorting */
   width: 100%; /* Ensures the image fills the width */
+
+}
+.welcome-message {
+  position: absolute;
+  top: 225px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10; /* Ensure it appears above the carousel */
+}
+.welcome-message h1{
+  white-space: nowrap;
+  font-size: 5rem; /* Adjust this size to make it even larger */
+  font-weight: bold;
+  color: #fff; /* White color to make it stand out on the image */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to improve readability */
+}
+.welcome-message h2{
+  white-space: nowrap;
+  font-size: 2rem; /* Adjust this size to make it even larger */
+  
+  color: #fff; /* White color to make it stand out on the image */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to improve readability */
+}
+
+.carousel-caption p {
+  font-size: 1rem; /* Adjust this for smaller text below the heading */
+  color: #fff;
+
+ 
+}
+.about-garage img {
+  width: 100%;
+  height: 420px;
+  border-radius: 10px;
+}
+
+/* Custom Styles */
+.why-choose-us h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.why-choose-us p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.why-choose-us img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .why-choose-us .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-choose-us img {
+    margin-bottom: 20px;
+  }
 }
