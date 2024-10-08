@@ -1,11 +1,13 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [username, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = new useNavigate();
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +20,10 @@ export default function Login() {
 
       if (res.data.success) {
         setMessage("Login Successful");
+        setTimeout(() => {
+          navigate('/'); // Redirect to home after successful login
+        }, 500);
+
       } else {
         setMessage("Login failed");
       }

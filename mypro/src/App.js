@@ -10,6 +10,10 @@ import Sign from './sign';
 import About from './about';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import BasicService from './BasicService';
+import PremiumService from './PremiumService';
+import UltimateService from './UltimateService';
+
 //import Carousel from './carousel'
 import {
   BrowserRouter as Router,
@@ -24,6 +28,7 @@ function App() {
     <Router>
     <Nav/>
     <Routes>
+    <Route path="/" element={<Home/>}/>
           <Route path="/home" element={<Home/>}/>
           <Route path="/about" element={<About/>} />
          
@@ -32,6 +37,9 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login.js" element={<Login/>} />
           <Route path="/sign.js" element={<Sign/>} />
+          <Route path="/BasicService.js" element={<BasicService/>} />
+          <Route path="/PremiumService.js" element={<PremiumService/>} />
+          <Route path="/UltimateService.js" element={<UltimateService/>} />
           
     </Routes>
     
