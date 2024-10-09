@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from './auth';
 export default function Login() {
+  const { login } = useAuth();
   const [username, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -20,6 +21,7 @@ export default function Login() {
 
       if (res.data.success) {
         setMessage("Login Successful");
+        login();
         setTimeout(() => {
           navigate('/'); // Redirect to home after successful login
         }, 500);

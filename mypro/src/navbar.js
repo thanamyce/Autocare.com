@@ -1,14 +1,16 @@
 import React from "react";
 import Nstyle from "./navbar.css";
 import { Link } from "react-router-dom";
+import { useAuth } from './auth';
 
-export default function navbar() {
+export default function Navbar() {
   /*function login() {
     window.location.href = "./login.js";
   }
   function sign() {
     window.location.href = "./sign.js";
   }*/
+    const { isLoggedIn } = useAuth();
 
   return (
     <>
@@ -75,31 +77,48 @@ export default function navbar() {
               </li>
             </ul>
             <div
-              class="btn-group w-25 my-1 "
-              role="group"
-              aria-label="Basic outlined example"
-            > 
-            
-              <button
+    className="d-flex align-items-center justify-content-end w-100 my-1" // Aligns items to the right
+    role="group"
+    aria-label="Basic outlined example"
+>
+    {isLoggedIn ? (
+        
+        <div style={{ marginRight: '10px' }}> {/* Adjust margin as needed */}
+            <Link to='/user'>
+            <img
+                src="https://cdn-icons-png.flaticon.com/128/12259/12259373.png"
+                alt="Profile"
+                className="rounded-circle"
+                style={{ width: '60px', height: '60px' }}
+            /></Link>
+        </div>
+    ) : null}
+
+    {!isLoggedIn && (
+        <div className="btn-group" role="group">
+            <button
                 type="button"
-                class="btn btn-outline-success p-2 fw-bold"
-                onClick={()=>{
-                  window.location.href = "./login.js";
+                className="btn btn-outline-success p-2 fw-bold me-2"
+                onClick={() => {
+                    window.location.href = "./login.js";
                 }}
-              >
+            >
                 Login
-              </button>
-              
-              <button
+            </button>
+
+            <button
                 type="button"
-                class="btn btn-outline-success p-2 fw-bold"
-                onClick={()=>{
-                  window.location.href = "./sign.js";
+                className="btn btn-outline-success p-2 fw-bold"
+                onClick={() => {
+                    window.location.href = "./sign.js";
                 }}
-              >
+            >
                 Sign Up
-              </button>
-            </div>
+            </button>
+        </div>
+    )}
+</div>
+
           </div>
         </div>
       </nav>

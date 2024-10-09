@@ -13,6 +13,8 @@ import "slick-carousel/slick/slick-theme.css";
 import BasicService from './BasicService';
 import PremiumService from './PremiumService';
 import UltimateService from './UltimateService';
+import { AuthProvider } from './auth';
+import User from './user'
 
 //import Carousel from './carousel'
 import {
@@ -24,7 +26,7 @@ import {
 
 function App() {
   return (
-    <>
+    <><AuthProvider>
     <Router>
     <Nav/>
     <Routes>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login.js" element={<Login/>} />
           <Route path="/sign.js" element={<Sign/>} />
+          <Route path="/user" element={<User/>} />
           <Route path="/BasicService.js" element={<BasicService/>} />
           <Route path="/PremiumService.js" element={<PremiumService/>} />
           <Route path="/UltimateService.js" element={<UltimateService/>} />
@@ -44,6 +47,7 @@ function App() {
     </Routes>
     
     </Router>
+    </AuthProvider>
     
     </>
   );
