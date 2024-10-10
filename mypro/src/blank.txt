@@ -56,3 +56,45 @@ mongodb://localhost:27017
 https://cdn-icons-png.flaticon.com/128/2052/2052385.png
 https://cdn-icons-png.flaticon.com/128/3389/3389596.png
 https://cdn-icons-png.flaticon.com/128/12988/12988677.png
+
+<div
+              class="btn-group w-25 my-1 "
+              role="group"
+              aria-label="Basic outlined example"
+            > 
+            
+              {isLoggedIn ? (
+                <div className="md-2">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/128/12259/12259373.png"
+                    alt="Profile"
+                    className="rounded-circle"
+                    style={{ width: '55px', height: '55px' }}
+                />
+                </div>
+            ) : (
+                <>
+                <div className=""></div>
+                    <button
+                        type="button"
+                        className="btn btn-outline-success p-2 fw-bold"
+                        onClick={() => {
+                            window.location.href = "./login.js";
+                        }}
+                    >
+                        Login
+                    </button>
+
+                    <button
+                        type="button"
+                        className="btn btn-outline-success p-2 fw-bold"
+                        onClick={() => {
+                            window.location.href = "./sign.js";
+                        }}
+                    >
+                        Sign Up
+                    </button>
+                </>
+            )}
+            </div>
+            className="btn-group w-25 my-1 "

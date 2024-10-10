@@ -95,10 +95,10 @@ export default function Navbar() {
     ) : null}
 
     {!isLoggedIn && (
-        <div className="btn-group" role="group">
+        <div className="btn">
             <button
                 type="button"
-                className="btn btn-outline-success p-2 fw-bold me-2"
+                className="btn btn-outline-success p-2 fw-bold me-2" style={{width: '100px', borderRadius: '20px'}}
                 onClick={() => {
                     window.location.href = "./login.js";
                 }}
@@ -108,7 +108,7 @@ export default function Navbar() {
 
             <button
                 type="button"
-                className="btn btn-outline-success p-2 fw-bold"
+                className="btn btn-outline-success p-2 fw-bold"  style={{width: '100px', borderRadius: '20px'}}
                 onClick={() => {
                     window.location.href = "./sign.js";
                 }}
