@@ -1,0 +1,68 @@
+.booking-page {
+    max-width: 600px; /* Set a max width for the booking form */
+    margin: 2rem auto; /* Center the form */
+    padding: 2.5rem; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #f9f9f9; /* Light background color */
+    text-align: left;
+  }
+  
+  h1 {
+    color: #28a745; /* Green color for the heading */
+    margin-bottom: 1.5rem; /* Space below heading */
+  }
+  
+  .user-info {
+    margin-bottom: 1.5rem; /* Space below user info */
+    font-size: 1.1rem; /* Slightly larger font for user info */
+  }
+  
+  .user-info p {
+    margin: 0.5rem 0; /* Space between user info paragraphs */
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem; /* Space below form groups */
+  }
+  
+  label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+  }
+  
+  input[type="date"],
+  input[type="time"],
+  select {
+    padding: 0.5rem; /* Padding inside inputs and select */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+  }
+  
+  input[type="date"]:focus,
+  input[type="time"]:focus,
+  select:focus {
+    border-color: #28a745; /* Green border on focus */
+    outline: none; /* Remove outline */
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 0.75rem; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

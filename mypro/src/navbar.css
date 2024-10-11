@@ -1,10 +1,24 @@
+/* navbar.css */
 
-li:hover{
-  transition: all 0.2s ease;
-  background-color: #72e9f1;
-  color: #ffffff;
-  border-radius: 20px;
-  
-  
-  
+/* Navbar styling */
+.navbar {
+  background-color: #f8f9fa; /* Light background for the navbar */
+  padding: 0.5rem; /* Add padding for better spacing */
 }
+
+/* Brand styling */
+.navbar-brand {
+  color: #17a2b8; /* Color for the AutoCare brand */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  font-size: 2rem; /* Adjust font size if needed */
+}
+
+/* Nav links styling */
+.navbar-nav .nav-link {
+  color: #333; /* Dark text color for links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8; /* Change color on hover */
+}
+

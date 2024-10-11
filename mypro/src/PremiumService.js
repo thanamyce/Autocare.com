@@ -1,7 +1,22 @@
 import React from 'react';
 import './package.css'; 
+import { useAuth } from './auth'; // Import your authentication context
+import { useNavigate } from 'react-router-dom';
 
 const PremiumService = () => {
+  const { isLoggedIn } = useAuth(); // Get user data from authentication context
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Function to handle the booking action
+  const handleBookService = () => {
+    if (isLoggedIn) {
+      // If user is logged in, navigate to the booking page
+      navigate('/bookingp'); // Change this to your booking form route
+    } else {
+      alert("Please log in to book a service."); // Alert if not logged in
+    }
+  };
+
   return (
     <section className="package-page py-5">
       <div className="container">
@@ -75,6 +90,12 @@ const PremiumService = () => {
               <p>We offer a warranty on all repairs and service parts.</p>
             </div>
           </div>
+        </div>
+        <div className="text-center mt-4">
+          <button className="btn btn-success"  style={{width: '425px', padding: '15px', fontSize: '20px', border: 'solid',borderWidth: '2px', borderColor: 'white'}}
+        onClick={handleBookService}>
+            Book Service
+          </button>
         </div>
       </div>
     </section>

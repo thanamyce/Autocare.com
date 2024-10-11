@@ -1,7 +1,22 @@
 import React from 'react';
 import './package.css'; // We'll add styles here.
+import { useAuth } from './auth'; // Import your authentication context
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 const BasicService = () => {
+  const { isLoggedIn } = useAuth(); // Get user data from authentication context
+  const navigate = useNavigate(); // Initialize navigation
+
+  // Function to handle the booking action
+  const handleBookService = () => {
+    if (isLoggedIn) {
+      // If user is logged in, navigate to the booking page
+      navigate('/booking'); // Change this to your booking form route
+    } else {
+      alert("Please log in to book a service."); // Alert if not logged in
+    }
+  };
+
   return (
     <section className="package-page py-5">
       <div className="container">
@@ -35,14 +50,13 @@ const BasicService = () => {
         {/* Service Benefits and Image Section */}
         <div className="row align-items-center">
           <div className="col-md-6">
-          <img
+            <img
               src="https://plus.unsplash.com/premium_photo-1682141938795-6f878eb81834?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyJTIwZW5naW5lfGVufDB8fDB8fHww"
               alt="Service Benefits Image"
               className="img-fluid package-image"
             />
           </div>
           <div className="col-md-6 text-center">
-           
             <h3 className="mb-3">Service Benefits</h3>
             <ul className="list-group">
               <li className="list-group-item">Improved Engine Performance</li>
@@ -75,6 +89,14 @@ const BasicService = () => {
               <p>Our mechanics provide professional and reliable service for your vehicle.</p>
             </div>
           </div>
+        </div>
+
+        {/* Book Service Button */}
+        <div className="text-center mt-4">
+          <button className="btn btn-success"  style={{width: '425px', padding: '15px', fontSize: '20px', border: 'solid',borderWidth: '2px', borderColor: 'white'}}
+        onClick={handleBookService}>
+            Book Service
+          </button>
         </div>
       </div>
     </section>

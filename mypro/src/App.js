@@ -8,6 +8,9 @@ import Profile from './profile';
 import Login from './login';
 import Sign from './sign';
 import About from './about';
+import Booking from './booking';
+import Bookingp from './bookingp';
+import Bookingu from './bookingu';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import BasicService from './BasicService';
@@ -33,9 +36,10 @@ function App() {
     <Route path="/" element={<Home/>}/>
           <Route path="/home" element={<Home/>}/>
           <Route path="/about" element={<About/>} />
-         
           <Route path="/profile" element={<Profile/>} />
-          
+          <Route path="/booking" element={<Booking/>} />
+          <Route path="/bookingp" element={<Bookingp/>} />
+          <Route path="/bookingu" element={<Bookingu/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login.js" element={<Login/>} />
           <Route path="/sign.js" element={<Sign/>} />

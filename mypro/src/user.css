@@ -1,10 +1,11 @@
 body {
-  margin: 0; /* Remove default margin */
+  margin-top: 0px; /* Remove default margin */
   padding: 0; /* Remove default padding */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 .profile-page {
   display: flex;
+  margin-top: 70px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -74,6 +75,8 @@ body {
 .vehicle-section {
   margin-top: 20px;
   padding: 20px;
+  align-items: center;
+  text-align: center;
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;

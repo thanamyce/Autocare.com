@@ -138,7 +138,7 @@ const Home = () => {
         <div className="service-box p-4 shadow-sm" style={{ borderRadius: "15px", backgroundColor: "#ffffff" }}>
           <img src="https://cdn-icons-png.flaticon.com/128/5803/5803534.png" alt="Ultimate Service" className="img-fluid mb-3" style={{ height: "80px" }} />
           <h5 className="service-title" style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "15px" }}>Ultimate Service</h5>
-          <p className="service-desc" style={{ fontSize: "1rem", color: "#777" }}>Full service package with all repairs included.</p>
+          <p className="service-desc" style={{ fontSize: "1rem", color: "#777" }}>Full service package with all repairs included. get exclusive user experience</p>
         </div>
       </div>
     </div>
