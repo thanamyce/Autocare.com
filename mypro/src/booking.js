@@ -33,7 +33,7 @@ const BookService = () => {
       userId: user._id,
       email: user.email,
       vehicleId: selectedVehicle,
-      servicePackageId: '6708d7156a82b5df258643a7',
+      servicePackageId: '670e6387925a0eaa818e6e63',
       date,
       time,
     };

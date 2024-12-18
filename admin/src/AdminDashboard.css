@@ -1,0 +1,36 @@
+.admin-dashboard {
+    display: flex;
+}
+
+.admin-sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #343a40;
+    padding: 20px;
+    position: fixed;
+}
+
+.admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-sidebar ul li {
+    margin: 20px 0;
+}
+
+.admin-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-sidebar ul li a:hover {
+    color: #00c851;
+}
+
+.admin-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+}

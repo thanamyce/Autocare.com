@@ -1,0 +1,47 @@
+.users{
+margin: auto;
+}
+.users-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  margin: auto;/* Centers vertically in full viewport height */
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Width of the card */
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.activeuser {
+  color: lightgreen; /* Active user highlight color */
+}
+.ac{
+  background-color: rgb(22, 22, 22);
+}
+
+.card-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center; /* Centering header */
+}

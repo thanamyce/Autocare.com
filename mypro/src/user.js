@@ -24,23 +24,13 @@ const Profile = () => {
             }
         };
 
-        const fetchServiceRequests = async () => {
-            try {
-                const res = await axios.get(`http://localhost:5000/service-requests/${user?._id}`); // Fetch service requests for the user
-                if (res.data.success) {
-                    setServiceRequests(res.data.requests); // Set service requests in state
-                }
-                
-            } catch (error) {
-                console.error('Error fetching service requests:', error);
-            }
-        };
+      
 
         fetchUserData(); // Call the fetch user data function
 
         // Fetch service requests only if user data is available
         if (user) {
-            fetchServiceRequests();
+           console.log("okay");
         }
     }, [user]); // Add user to the dependency array
 
@@ -152,22 +142,7 @@ const Profile = () => {
                 </div>
 
                 {/* Service Requests Section */}
-                <div className="vehicle-section">
-                    <h3>Service Requests</h3>
-                    {serviceRequests.length > 0 ? (
-                        serviceRequests.map((request, index) => (
-                            <div key={index}>
-                                <p><strong>Request ID:</strong> {request._id}</p>
-                                <p><strong>Vehicle Model:</strong> {request.vehicleId.model}</p>
-                                <p><strong>Status:</strong> {request.status}</p>
-                            </div>
-                        ))
-                    ) : (
-                        <div>
-                            <p>No service requests available</p>
-                        </div>
-                    )}
-                </div>
+                
             </div>
         </div>
     );

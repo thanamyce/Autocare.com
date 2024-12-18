@@ -2,7 +2,7 @@
 import './App.css';
 import Nav from './navbar';
 import Home from './home';
-
+import Track from './track';
 import Contact from './contact';
 import Profile from './profile';
 import Login from './login';
@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import BasicService from './BasicService';
 import PremiumService from './PremiumService';
 import UltimateService from './UltimateService';
+import Payment from './payment';
 import { AuthProvider } from './auth';
 import User from './user'
 
@@ -43,7 +44,9 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login.js" element={<Login/>} />
           <Route path="/sign.js" element={<Sign/>} />
+          <Route path="/track" element={<Track/>} />
           <Route path="/user" element={<User/>} />
+          <Route path="/payment" element={<Payment/>} />
           <Route path="/BasicService.js" element={<BasicService/>} />
           <Route path="/PremiumService.js" element={<PremiumService/>} />
           <Route path="/UltimateService.js" element={<UltimateService/>} />

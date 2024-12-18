@@ -1,0 +1,24 @@
+.home-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  color: #343a40;
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+.home-links {
+  margin-top: 30px;
+}
+
+.home-links .btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
